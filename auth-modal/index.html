@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Auth Modal</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="formBx">
+                <div class="form signinform">
+                    <form>
+                        <h2>TRANSCENDENCE</h2>
+                        <h3>Sign In</h3>
+                        <div class="input-field">
+                            <h4>Username</h4>
+                            <input type="text" id="sigin-username" placeholder="JohnDoe">
+                        </div>
+                        <div class="input-field">
+                            <h4>Password</h4>
+                            <input type="password" id="signin-password" placeholder="Your password">
+                        </div>
+                        <p class="forgotBtn forgot" style="padding: 10px; cursor:pointer;">Forgot Password?</p>
+                        <div class="signButtons">
+                            <input type="submit" class="primary-btn" style="margin-right: 10px;" value="Log In Now">
+                            <button class="signupBtn secondary-btn">Register</button>
+                        </div>
+                        <p class="forgot option-text">- OR LOGIN WITH -</p>
+                        <button class="primary-btn-alt">42 account</button>
+                    </form>
+                </div>
+                <div class="form signupform">
+                    <form>
+                        <h2>TRANSCENDENCE</h2>
+                        <h3>Sign Up</h3>
+                        <div class="input-field">
+                            <h4>Username</h4>
+                            <input type="text" id="signup-username" placeholder="JohnDoe">
+                        </div>
+                        <div class="input-field">
+                            <h4>Email Address</h4>
+                            <input type="email" id="signup-email" placeholder="johndoe@gmail.com">
+                        </div>
+                        <div class="input-field">
+                            <h4>Password</h4>
+                            <input type="password" id="signup-password" placeholder="Your password">
+                        </div>
+                        <div class="input-field">
+                            <h4>Confirm Password</h4>
+                            <input type="password" id="signup-confirm-pwd" placeholder="Confirm your password">
+                        </div>
+                        <div class="signButtons">
+                            <input type="submit" class="primary-btn" style="margin-right: 10px;" value="Register now">
+                            <button class="signinBtn secondary-btn">Log In</button>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="terms" value="terms_checkbox" />
+                            <label for="terms">I agree to the terms and conditions</label>
+                        </div>
+                        <p class="forgot option-text">- OR REGISTER WITH -</p>
+                        <button class="primary-btn-alt">42 account</button>
+                    </form>
+                </div>
+                <div class="form forgotform">
+                    <form>
+                        <button class="forgotSigninBtn secondary-btn-alt"></button>
+                        <h2>TRANSCENDENCE</h2>
+                        <h3>Password assistance</h3>
+                        <p class="intro">Enter your email or username and we’ll send you instructions on how to reset your password.</p>
+                        <div class="input-field">
+                            <h4>Email or Username</h4>
+                            <input type="text" id="forgot-email" placeholder="Identify yourself">
+                        </div>
+                        <input type="submit" class="primary-btn" value="Send instructions">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>
