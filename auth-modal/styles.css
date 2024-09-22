@@ -12,15 +12,33 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #03a9f4;
+    background: #000235;
     transition: 1s;
+}
+
+.auth-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    max-width: 800px;
+    max-height: 750px;
+    border-radius: 20px;
+    border: none;
+    background: url('./paddle.jpg') no-repeat center center/cover;
+    z-index: 1000;
+}
+
+.auth-modal::backdrop {
+    background: rgba(0, 0, 0, 0.15);
 }
 
 .container {
     position: relative;
-    width: 800px;
-    height: 400px;
-    background: rgba(0, 0, 0, 0.125);
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,20 +46,21 @@ body {
 
 .formBx {
     position: absolute;
-    left: 50px;
-    width: 400px;
-    height: 750px;
+    left: 0;
+    width: 50%;
+    height: 100%;
     background: #13124F;
-    z-index: 1000;
-    box-shadow: 0 5px 25px rgba(255, 255, 255, 0.15);
+    z-index: 2000;
     transition: 0.5s;
     transition-delay: 0.5s;
     overflow: hidden;
-    border-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
 .slide .formBx {
-    left: 400px;
+    left: 50%;
+    border-radius: 0 20px 20px 0;
 }
 
 .formBx .form {
@@ -51,30 +70,29 @@ body {
     width: 100%;
     height: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     transition: 0.5s;
     background: #13124F;
-    border-radius: 20px;
 }
 
-.formBx .form.signupform {
+.formBx .form.signinform {
     top: 100%;
     transition-delay: 0s;
 }
 
-.slide .formBx .form.signupform {
-    top: 0;
-    transition-delay: 1s;
-}
-
-.formBx .form.signinform {
-    top: 0;
-    left: 0;
-    transition-delay: 1s;
-}
-
 .slide .formBx .form.signinform {
+    top: 0;
+    transition-delay: 1s;
+}
+
+.formBx .form.signupform {
+    top: 0;
+    transition-delay: 1s;
+}
+
+.slide .formBx .form.signupform {
     top: -100%;
     transition-delay: 0s;
 }
@@ -227,4 +245,49 @@ label {
     font-weight: 400;
     font-size: 0.75em;
     margin: 15px 0;
+}
+
+.icons-toolbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.icons-toolbar i {
+    margin-bottom: 10px;
+}
+
+i {
+    cursor: pointer;
+    padding: 5px;
+    font-size: 1.6em;
+    color: white;
+}
+
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+.togglePassword {
+    position: absolute;
+    font-size: 1em;
+    right: 10px;
+}
+
+dialog {
+    transition: opacity .3s ease,
+        display .3s ease allow-discrete;
+    opacity: 0;
+}
+
+dialog[open] {
+    opacity: 1;
+    transition: opacity .3s ease-in-out;
+
+    @starting-style {
+        opacity: 0;
+    }
 }

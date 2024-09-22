@@ -5,78 +5,116 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Auth Modal</title>
         <link rel="stylesheet" href="styles.css">
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     </head>
     <body>
-        <div class="container">
-            <div class="formBx">
-                <div class="form signinform">
-                    <form>
-                        <h2>TRANSCENDENCE</h2>
-                        <h3>Sign In</h3>
-                        <div class="input-field">
-                            <h4>Username</h4>
-                            <input type="text" id="sigin-username" placeholder="JohnDoe">
+        <div style="display: flex; align-items: center; justify-content: space-evenly; width: 200px; height: 100px">
+            <button class="openModalBtn" class="primary-btn">Sign Up</button>
+            <button class="openModalBtn signInModal" class="primary-btn-alt">Sign In</button>
+        </div>
+        <dialog id="authModal" class="auth-modal">
+            <div class="container">
+                <div class="formBx">
+                    <div class="form signupform">
+                        <div class="icons-toolbar">
+                            <i class='closeModalBtn bx bx-x' ></i>
                         </div>
-                        <div class="input-field">
-                            <h4>Password</h4>
-                            <input type="password" id="signin-password" placeholder="Your password">
+                        <form>
+                            <h2>TRANSCENDENCE</h2>
+                            <h3>Sign Up</h3>
+                            <div class="input-field">
+                                <h4>Username</h4>
+                                <input type="text" id="signup-username" placeholder="JohnDoe" required>
+                                <span class="error-message" style="display: none; color: red;">Error message here</span>
+                            </div>
+                            <div class="input-field">
+                                <h4>Email Address</h4>
+                                <input type="email" id="signup-email" placeholder="johndoe@gmail.com" required>
+                                <span class="error-message" style="display: none; color: red;">Error message here</span>
+                            </div>
+                            <div class="input-field">
+                                <h4>Password</h4>
+                                <div class="password-container">
+                                    <input type="password" id="signup-password" placeholder="Your password" required>
+                                    <span class="togglePassword">
+                                        <i class='bx bx-low-vision'></i>
+                                    </span>
+                                </div>
+                                <span class="error-message" style="display: none; color: red;">Error message here</span>
+                            </div>
+                            <div class="input-field">
+                                <h4>Confirm Password</h4>
+                                <div class="password-container">
+                                    <input type="password" id="signup-confirm-pwd" placeholder="Confirm your password" required>
+                                    <span class="togglePassword">
+                                        <i class='bx bx-low-vision'></i>
+                                    </span>
+                                </div>
+                                <span class="error-message" style="display: none; color: red;">Error message here</span>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" id="terms" value="terms_checkbox" required />
+                                <label for="terms">I agree to the terms and conditions</label>
+                            </div>
+                            <div class="signButtons">
+                                <input type="submit" class="primary-btn" style="margin-right: 10px;" value="Register now">
+                                <button class="signinBtn secondary-btn">Log In</button>
+                            </div>
+                            <p class="forgot option-text">- OR REGISTER WITH -</p>
+                            <button class="primary-btn-alt">42 account</button>
+                        </form>
+                    </div>
+                    <div class="form signinform">
+                        <div class="icons-toolbar" style="flex-direction: row-reverse;">
+                            <i class='closeModalBtn bx bx-x' ></i>
                         </div>
-                        <p class="forgotBtn forgot" style="padding: 10px; cursor:pointer;">Forgot Password?</p>
-                        <div class="signButtons">
-                            <input type="submit" class="primary-btn" style="margin-right: 10px;" value="Log In Now">
-                            <button class="signupBtn secondary-btn">Register</button>
+                        <form>
+                            <h2>TRANSCENDENCE</h2>
+                            <h3>Sign In</h3>
+                            <div class="input-field">
+                                <h4>Username</h4>
+                                <input type="text" id="sigin-username" placeholder="JohnDoe" required>
+                                <span class="error-message" style="display: none; color: red;">Error message here</span>
+                            </div>
+                            <div class="input-field">
+                                <h4>Password</h4>
+                                <div class="password-container">
+                                    <input type="password" id="signin-password" placeholder="Your password" required>
+                                    <span class="togglePassword">
+                                        <i class='bx bx-low-vision'></i>
+                                    </span>
+                                </div>
+                                <span class="error-message" style="display: none; color: red;">Error message here</span>
+                            </div>
+                            <p class="forgotBtn forgot" style="padding: 10px; cursor:pointer; width:fit-content">Forgot Password?</p>
+                            <div class="signButtons">
+                                <input type="submit" class="primary-btn" style="margin-right: 10px;" value="Log In Now">
+                                <button class="signupBtn secondary-btn">Register</button>
+                            </div>
+                            <p class="forgot option-text">- OR LOGIN WITH -</p>
+                            <button class="primary-btn-alt">42 account</button>
+                        </form>
+                    </div>
+                    <div class="form forgotform">
+                        <div class="icons-toolbar">
+                            <i class='forgotSigninBtn bx bx-right-arrow-alt' ></i>
+                            <i class='closeModalBtn bx bx-x' ></i>
                         </div>
-                        <p class="forgot option-text">- OR LOGIN WITH -</p>
-                        <button class="primary-btn-alt">42 account</button>
-                    </form>
-                </div>
-                <div class="form signupform">
-                    <form>
-                        <h2>TRANSCENDENCE</h2>
-                        <h3>Sign Up</h3>
-                        <div class="input-field">
-                            <h4>Username</h4>
-                            <input type="text" id="signup-username" placeholder="JohnDoe">
-                        </div>
-                        <div class="input-field">
-                            <h4>Email Address</h4>
-                            <input type="email" id="signup-email" placeholder="johndoe@gmail.com">
-                        </div>
-                        <div class="input-field">
-                            <h4>Password</h4>
-                            <input type="password" id="signup-password" placeholder="Your password">
-                        </div>
-                        <div class="input-field">
-                            <h4>Confirm Password</h4>
-                            <input type="password" id="signup-confirm-pwd" placeholder="Confirm your password">
-                        </div>
-                        <div class="signButtons">
-                            <input type="submit" class="primary-btn" style="margin-right: 10px;" value="Register now">
-                            <button class="signinBtn secondary-btn">Log In</button>
-                        </div>
-                        <div class="checkbox">
-                            <input type="checkbox" id="terms" value="terms_checkbox" />
-                            <label for="terms">I agree to the terms and conditions</label>
-                        </div>
-                        <p class="forgot option-text">- OR REGISTER WITH -</p>
-                        <button class="primary-btn-alt">42 account</button>
-                    </form>
-                </div>
-                <div class="form forgotform">
-                    <form>
-                        <button class="forgotSigninBtn secondary-btn-alt"></button>
-                        <h2>TRANSCENDENCE</h2>
-                        <h3>Password assistance</h3>
-                        <p class="intro">Enter your email or username and we’ll send you instructions on how to reset your password.</p>
-                        <div class="input-field">
-                            <h4>Email or Username</h4>
-                            <input type="text" id="forgot-email" placeholder="Identify yourself">
-                        </div>
-                        <input type="submit" class="primary-btn" value="Send instructions">
-                    </form>
+                        <form>
+                            <h2>TRANSCENDENCE</h2>
+                            <h3>Password assistance</h3>
+                            <p class="intro">Enter your email or username and we'll send you instructions on how to reset your password.</p>
+                            <div class="input-field" style="margin-bottom: 10px;">
+                                <h4>Email or Username</h4>
+                                <input type="text" id="forgot-email" placeholder="Identify yourself" required>
+                                <span class="error-message" style="display: none; color: red;">Error message here</span>
+                            </div>
+                            <input type="submit" class="primary-btn" value="Send instructions">
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
+        </dialog>
         <script src="main.js"></script>
     </body>
 </html>
