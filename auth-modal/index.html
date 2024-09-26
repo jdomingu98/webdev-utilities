@@ -9,8 +9,8 @@
     </head>
     <body>
         <div style="display: flex; align-items: center; justify-content: space-evenly; width: 200px; height: 100px">
-            <button class="openModalBtn" class="primary-btn">Sign Up</button>
-            <button class="openModalBtn signInModal" class="primary-btn-alt">Sign In</button>
+            <button class="openModalBtn">Sign Up</button>
+            <button class="openModalBtn signInModal">Sign In</button>
         </div>
         <dialog id="authModal" class="auth-modal">
             <div class="container">
@@ -25,12 +25,12 @@
                             <div class="input-field">
                                 <h4>Username</h4>
                                 <input type="text" id="signup-username" placeholder="JohnDoe" required>
-                                <span class="error-message" style="display: none; color: red;">Error message here</span>
+                                <p class="error-message">Error message here</p>
                             </div>
                             <div class="input-field">
                                 <h4>Email Address</h4>
                                 <input type="email" id="signup-email" placeholder="johndoe@gmail.com" required>
-                                <span class="error-message" style="display: none; color: red;">Error message here</span>
+                                <p class="error-message">Error message here</p>
                             </div>
                             <div class="input-field">
                                 <h4>Password</h4>
@@ -40,7 +40,7 @@
                                         <i class='bx bx-low-vision'></i>
                                     </span>
                                 </div>
-                                <span class="error-message" style="display: none; color: red;">Error message here</span>
+                                <p class="error-message">Error message here</p>
                             </div>
                             <div class="input-field">
                                 <h4>Confirm Password</h4>
@@ -50,7 +50,7 @@
                                         <i class='bx bx-low-vision'></i>
                                     </span>
                                 </div>
-                                <span class="error-message" style="display: none; color: red;">Error message here</span>
+                                <p class="error-message">Error message here</p>
                             </div>
                             <div class="checkbox">
                                 <input type="checkbox" id="terms" value="terms_checkbox" required />
@@ -74,7 +74,7 @@
                             <div class="input-field">
                                 <h4>Username</h4>
                                 <input type="text" id="sigin-username" placeholder="JohnDoe" required>
-                                <span class="error-message" style="display: none; color: red;">Error message here</span>
+                                <p class="error-message">Error message here</p>
                             </div>
                             <div class="input-field">
                                 <h4>Password</h4>
@@ -84,7 +84,7 @@
                                         <i class='bx bx-low-vision'></i>
                                     </span>
                                 </div>
-                                <span class="error-message" style="display: none; color: red;">Error message here</span>
+                                <p class="error-message">Error message here</p>
                             </div>
                             <p class="forgotBtn forgot" style="padding: 10px; cursor:pointer; width:fit-content">Forgot Password?</p>
                             <div class="signButtons">
@@ -107,7 +107,7 @@
                             <div class="input-field" style="margin-bottom: 10px;">
                                 <h4>Email or Username</h4>
                                 <input type="text" id="forgot-email" placeholder="Identify yourself" required>
-                                <span class="error-message" style="display: none; color: red;">Error message here</span>
+                                <p class="error-message">Error message here</p>
                             </div>
                             <input type="submit" class="primary-btn" value="Send instructions">
                         </form>

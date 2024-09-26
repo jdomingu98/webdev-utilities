@@ -148,7 +148,7 @@ body {
 
 .formBx .form form input, .formBx .form form button {
     padding: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     width: 100%;
     border: 1px solid #ABD9D9;
     outline: none;
@@ -236,7 +236,7 @@ label {
 .checkbox {
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
+    margin: 15px 0;
 }
 
 .intro {
@@ -290,4 +290,16 @@ dialog[open] {
     @starting-style {
         opacity: 0;
     }
+}
+
+.input-error {
+    border: 2px solid #DA8D8D !important;
+}
+
+.error-message {
+    color: #DA8D8D;
+    font-size: 0.8em;
+    margin: 10px 0 20px 0;
+    font-weight: 600;
+    display: none;
 }
